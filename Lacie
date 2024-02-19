@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Load the dataset
+file_path = 'sentimentdataset.csv'
+data = pd.read_csv(file_path)
+
+# Basic Overview of the Dataset
+print("Dataset Overview:")
+print(data.describe(include='all'))
+print("\n")
+
+# Count of Unique Values in Each Column
+print("Unique Values in Each Column:")
+for col in data.columns:
+    print(f"{col}: {data[col].nunique()} unique values")
+print("\n")
